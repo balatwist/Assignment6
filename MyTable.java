@@ -8,7 +8,7 @@ public class MyTable {
 
     public String get(char c) {
         if (c < 'a' || c > 'z') {
-            return null; // out of bounds
+            return null;
         }
         int index = c - 'a';
         return (entries[index] != null) ? entries[index].str : null;
@@ -17,7 +17,7 @@ public class MyTable {
 
     public void add(char c, String s) {
         if (c < 'a' || c > 'z') {
-            return; // out of bounds
+            return;
         }
         int index = c - 'a';
         entries[index] = new Entry(c, s);
@@ -43,7 +43,7 @@ public class MyTable {
             this.str = str;
         }
 
-        // returns a String of the form "ch->str"
+        
         public String toString() {
             return ch + "->" + str;
         }
